@@ -91,6 +91,7 @@ function find_need(){
 function find_sequence(){
   find_avai();
   find_need();
+  var k=1;
   var checker = 0;
   var q = 1;
   document.getElementById('calc0').innerHTML = '&nbsp Calculating the Final Order....'+'<br/>';
@@ -117,6 +118,10 @@ function find_sequence(){
           document.getElementById('a'+i+'1').value = '0';
           document.getElementById('a'+i+'2').value = '0';
           document.getElementById('a'+i+'3').value = '0';
+          k=i+1;
+          if (k==6){
+            k=1;
+          }
           q = q + 1;
           checker = checker + 1;
           break;
@@ -126,8 +131,6 @@ function find_sequence(){
   }
   if(checker == 0){
     alert("Deadlock!!");
-    for(var i=0; i<=5; i++){
-      document.getElementById('calc'+i).innerHTML = '';
-    }
+    reset();
   }
 }
