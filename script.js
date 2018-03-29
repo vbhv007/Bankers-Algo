@@ -100,7 +100,7 @@ function find_sequence(){
     x2 = parseInt(document.getElementById('av12').value);
     x3 = parseInt(document.getElementById('av13').value);
     document.getElementById('calc'+j).innerHTML = 'Step'+j+':&nbsp&nbsp'+'Available Matrix = '+x1+', '+x2+', '+x3;
-    for(var i=1; i<=5; i++){
+    for(var i=k; i<=5; i++){
       var ex1 = parseInt(document.getElementById('a'+i+'1').value);
       var ex2 = parseInt(document.getElementById('a'+i+'2').value);
       var ex3 = parseInt(document.getElementById('a'+i+'3').value);
